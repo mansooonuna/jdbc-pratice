@@ -22,9 +22,9 @@ public class UserDaoTest {
     @Test
     void createTest() throws SQLException {
         UserDao userDao = new UserDao();
-        userDao.create(new User("test", "password", "name", "email"));
+        userDao.create2(new User("test", "password", "name", "email"));
 
-        User user = userDao.findByUserId("test");
+        User user = userDao.findByUserId2("test");
         assertThat(user).isEqualTo(new User("test", "password", "name", "email"));
     }
 }
